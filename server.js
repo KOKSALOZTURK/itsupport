@@ -2,11 +2,12 @@
 const express = require('express');
 const fetch = require('node-fetch');
 const cors = require('cors');
+require('dotenv').config();
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-const OPENAI_API_KEY = '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'; // <-- Insert your OpenAI API key here (keep this secret!)
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY; // <-- Now loaded from .env
 
 app.post('/api/ask', async (req, res) => {
   const { userMsg } = req.body;
