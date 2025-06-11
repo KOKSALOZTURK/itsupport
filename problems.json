@@ -1,0 +1,513 @@
+{
+    "mac_stuck_on_logo": {
+        "category": "Startup & Boot",
+        "key": "mac_stuck_on_logo",
+        "title": "Mac Stuck on Apple Logo During Boot",
+        "questions": [
+            "Did the issue start after a macOS update or software installation?",
+            "Do you hear any startup sound or feel fan activity?"
+        ],
+        "solution_steps": [
+            "Force shut down the Mac and restart it.",
+            "Immediately press and hold Command (\u2318) + R to enter macOS Recovery.",
+            "In Recovery, open Disk Utility and run First Aid on the startup disk.",
+            "If no issues are found, reinstall macOS from Recovery.",
+            "If Recovery fails, try Internet Recovery (Command + Option + R).",
+            "Attempt Safe Mode (hold Shift while booting).",
+            "If nothing works, run Apple Diagnostics (hold D during startup)."
+        ]
+    },
+    "mac_slow_performance": {
+        "category": "Performance",
+        "key": "mac_slow_performance",
+        "title": "Mac Running Slow or Lagging",
+        "questions": [
+            "When did the slowness begin?",
+            "Does it occur with specific apps or system-wide?"
+        ],
+        "solution_steps": [
+            "Close unused apps and browser tabs.",
+            "Open Activity Monitor and check CPU and Memory tabs for heavy processes.",
+            "Restart the Mac.",
+            "Clear login items from System Settings > Users & Groups.",
+            "Free up storage space if disk is nearly full.",
+            "Reset SMC and NVRAM (see detailed steps below).",
+            "Run a malware scan using a trusted tool like Malwarebytes.",
+            "\nSMC Reset (for Intel Macs):\n1. Shut down your Mac.\n2. On MacBooks with T2 chip: Hold Control + Option (Alt) + Shift (right side) for 7 seconds, then add Power for another 7 seconds. Release all, wait a few seconds, then turn on.\n3. On other Intel MacBooks: Hold Shift + Control + Option (left side) + Power for 10 seconds. Release, then turn on.\n4. On desktops: Unplug power for 15 seconds, plug back in, wait 5 seconds, then turn on.\n\nNVRAM/PRAM Reset (Intel Macs):\n1. Shut down your Mac.\n2. Turn it on and immediately hold Option + Command + P + R for 20 seconds.\n3. Release keys after second startup sound or Apple logo appears/disappears twice.\n\nApple Silicon (M1/M2/M3):\n- SMC and NVRAM reset automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "wifi_disconnects": {
+        "category": "Network & Internet",
+        "key": "wifi_disconnects",
+        "title": "Wi-Fi Keeps Disconnecting or Won\u2019t Connect",
+        "questions": [
+            "Are other devices affected on the same network?",
+            "Does the issue happen on all Wi-Fi networks?"
+        ],
+        "solution_steps": [
+            "Toggle Wi-Fi off and back on from the menu bar.",
+            "Forget the current network and reconnect with the password.",
+            "Create a new network location via System Settings > Network.",
+            "Change DNS to 8.8.8.8 and 1.1.1.1.",
+            "Reset NVRAM (see detailed steps below).",
+            "Run Wireless Diagnostics (Option + click Wi-Fi icon).",
+            "\nNVRAM/PRAM Reset (Intel Macs):\n1. Shut down your Mac.\n2. Turn it on and immediately hold Option + Command + P + R for 20 seconds.\n3. Release keys after second startup sound or Apple logo appears/disappears twice.\n\nApple Silicon (M1/M2/M3):\n- NVRAM resets automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "battery_drops": {
+        "category": "Power & Battery",
+        "key": "battery_drops",
+        "title": "Battery Percentage Drops Rapidly or Unexpected Shutdowns",
+        "questions": [
+            "Is Battery Health showing 'Service Recommended'?",
+            "Are you using the original charger and cable?"
+        ],
+        "solution_steps": [
+            "Check battery condition under Apple Menu > About This Mac > System Report > Power.",
+            "Reset SMC (see detailed steps below).",
+            "Close background apps that consume battery via Activity Monitor.",
+            "Update to the latest version of macOS.",
+            "Consider battery replacement if cycle count is high or condition is degraded.",
+            "\nSMC Reset (for Intel Macs):\n1. Shut down your Mac.\n2. On MacBooks with T2 chip: Hold Control + Option (Alt) + Shift (right side) for 7 seconds, then add Power for another 7 seconds. Release all, wait a few seconds, then turn on.\n3. On other Intel MacBooks: Hold Shift + Control + Option (left side) + Power for 10 seconds. Release, then turn on.\n4. On desktops: Unplug power for 15 seconds, plug back in, wait 5 seconds, then turn on.\n\nApple Silicon (M1/M2/M3):\n- SMC resets automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "external_monitor_not_detected": {
+        "category": "Display",
+        "key": "external_monitor_not_detected",
+        "title": "External Monitor Not Detected",
+        "questions": [
+            "Have you tried another HDMI/DisplayPort cable or adapter?",
+            "Does the external display work with another device?"
+        ],
+        "solution_steps": [
+            "Check cable and port connections.",
+            "Go to System Settings > Displays and click 'Detect Displays'.",
+            "Reset NVRAM and SMC (see detailed steps below).",
+            "Try Safe Mode to rule out third-party conflicts.",
+            "Update macOS and GPU firmware if available.",
+            "\nSMC Reset (for Intel Macs):\n1. Shut down your Mac.\n2. On MacBooks with T2 chip: Hold Control + Option (Alt) + Shift (right side) for 7 seconds, then add Power for another 7 seconds. Release all, wait a few seconds, then turn on.\n3. On other Intel MacBooks: Hold Shift + Control + Option (left side) + Power for 10 seconds. Release, then turn on.\n4. On desktops: Unplug power for 15 seconds, plug back in, wait 5 seconds, then turn on.\n\nNVRAM/PRAM Reset (Intel Macs):\n1. Shut down your Mac.\n2. Turn it on and immediately hold Option + Command + P + R for 20 seconds.\n3. Release keys after second startup sound or Apple logo appears/disappears twice.\n\nApple Silicon (M1/M2/M3):\n- SMC and NVRAM reset automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "microphone_not_working": {
+        "category": "Audio",
+        "key": "microphone_not_working",
+        "title": "Microphone Not Working",
+        "questions": [
+            "Is the correct microphone selected in Sound settings?",
+            "Does this happen across all apps or just one?"
+        ],
+        "solution_steps": [
+            "Go to System Settings > Sound > Input and verify the correct device.",
+            "Check app permissions under Privacy & Security > Microphone.",
+            "Restart the Mac.",
+            "Run `sudo killall coreaudiod` in Terminal to reset audio services.",
+            "Try another input device if external."
+        ]
+    },
+    "forgot_password": {
+        "category": "Login & Account",
+        "key": "forgot_password",
+        "title": "Forgot Login Password",
+        "questions": [
+            "Do you see the password hint or 'Forgot Password' option?",
+            "Is FileVault enabled on the system?"
+        ],
+        "solution_steps": [
+            "Click 'Forgot Password' on the login screen and follow the prompts.",
+            "If that fails, boot into macOS Recovery using Command + R.",
+            "Open Terminal and type `resetpassword` to reset the account password.",
+            "If the account is encrypted with FileVault, recovery key or Apple ID may be required.",
+            "Reboot and log in with the new credentials."
+        ]
+    },
+    "camera_not_working": {
+        "category": "Camera & Video",
+        "key": "camera_not_working",
+        "title": "Camera Not Working or Detected",
+        "questions": [
+            "Does the camera work in any app (e.g., FaceTime)?",
+            "Have you granted camera permissions to the app in System Settings?"
+        ],
+        "solution_steps": [
+            "Go to System Settings > Privacy & Security > Camera and check app permissions.",
+            "Restart the Mac and try using the camera again.",
+            "Quit all apps that use the camera and reopen the one you need.",
+            "Open Terminal and run: `sudo killall VDCAssistant`.",
+            "Run Apple Diagnostics (hold D on boot) to check for hardware issues."
+        ]
+    },
+    "external_drive_issue": {
+        "category": "Storage & File Access",
+        "key": "external_drive_issue",
+        "title": "External Drive Not Mounting",
+        "questions": [
+            "Is the drive visible in Disk Utility?",
+            "Is the format compatible with macOS (e.g., APFS, HFS+, exFAT)?"
+        ],
+        "solution_steps": [
+            "Connect the drive and open Disk Utility.",
+            "If it appears but isn’t mounted, click the 'Mount' button manually.",
+            "Try another USB port or cable.",
+            "Reset SMC and NVRAM (see detailed steps below).",
+            "Test the drive on another computer to rule out hardware failure.",
+            "\nSMC Reset (for Intel Macs):\n1. Shut down your Mac.\n2. On MacBooks with T2 chip: Hold Control + Option (Alt) + Shift (right side) for 7 seconds, then add Power for another 7 seconds. Release all, wait a few seconds, then turn on.\n3. On other Intel MacBooks: Hold Shift + Control + Option (left side) + Power for 10 seconds. Release, then turn on.\n4. On desktops: Unplug power for 15 seconds, plug back in, wait 5 seconds, then turn on.\n\nNVRAM/PRAM Reset (Intel Macs):\n1. Shut down your Mac.\n2. Turn it on and immediately hold Option + Command + P + R for 20 seconds.\n3. Release keys after second startup sound or Apple logo appears/disappears twice.\n\nApple Silicon (M1/M2/M3):\n- SMC and NVRAM reset automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "filevault_stuck": {
+        "category": "Security & Privacy",
+        "key": "filevault_stuck",
+        "title": "FileVault Encryption Stuck or Paused",
+        "questions": [
+            "Is the Mac plugged into a power adapter?",
+            "Was the disk almost full before enabling FileVault?"
+        ],
+        "solution_steps": [
+            "Ensure the Mac is connected to power. FileVault encryption will not continue on battery.",
+            "Go to System Settings > Privacy & Security > FileVault and check status.",
+            "If stuck, try disabling FileVault and re-enabling it later.",
+            "Use Terminal: `fdesetup status` to verify progress.",
+            "If corruption suspected, back up data and reformat the drive."
+        ]
+    },
+    "time_machine_not_working": {
+        "category": "Backup & Restore",
+        "key": "time_machine_not_working",
+        "title": "Time Machine Backup Not Working",
+        "questions": [
+            "Is the backup drive connected and mounted properly?",
+            "Has Time Machine recently reported any errors or alerts?"
+        ],
+        "solution_steps": [
+            "Go to System Settings > General > Time Machine and select the correct disk.",
+            "Ensure the backup disk has sufficient free space.",
+            "Use Disk Utility to run First Aid on the backup drive.",
+            "Delete corrupted backups via Finder > Backups.backupdb (advanced users only).",
+            "Recreate Time Machine backup by removing and re-adding the backup disk."
+        ]
+    },
+    "printer_not_working": {
+        "category": "Printing & Peripheral",
+        "key": "printer_not_working",
+        "title": "Printer Not Working or Not Detected",
+        "questions": [
+            "Is the printer turned on and connected via USB or network?",
+            "Does the printer work from another device or with another cable?"
+        ],
+        "solution_steps": [
+            "Check the printer\u2019s connection (USB/Wi-Fi) and power status.",
+            "Open System Settings > Printers & Scanners and ensure the printer is listed.",
+            "Remove and re-add the printer from the list.",
+            "Download the latest printer drivers from the manufacturer\u2019s website.",
+            "Restart the Mac and try printing again."
+        ]
+    },
+    "dock_not_recognized": {
+        "category": "Peripheral & Dock",
+        "key": "dock_not_recognized",
+        "title": "Docking Station Not Recognized",
+        "questions": [
+            "Are all peripherals connected via the dock not working?",
+            "Is the dock receiving power?"
+        ],
+        "solution_steps": [
+            "Unplug and reconnect the dock, and restart the Mac.",
+            "Ensure the dock firmware is up-to-date (check vendor site).",
+            "Try each port independently to test functionality.",
+            "Reset SMC and NVRAM (see detailed steps below).",
+            "Try the dock with another Mac to isolate the issue.",
+            "\nSMC Reset (for Intel Macs):\n1. Shut down your Mac.\n2. On MacBooks with T2 chip: Hold Control + Option (Alt) + Shift (right side) for 7 seconds, then add Power for another 7 seconds. Release all, wait a few seconds, then turn on.\n3. On other Intel MacBooks: Hold Shift + Control + Option (left side) + Power for 10 seconds. Release, then turn on.\n4. On desktops: Unplug power for 15 seconds, plug back in, wait 5 seconds, then turn on.\n\nNVRAM/PRAM Reset (Intel Macs):\n1. Shut down your Mac.\n2. Turn it on and immediately hold Option + Command + P + R for 20 seconds.\n3. Release keys after second startup sound or Apple logo appears/disappears twice.\n\nApple Silicon (M1/M2/M3):\n- SMC and NVRAM reset automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "icloud_not_syncing": {
+        "category": "iCloud & Sync",
+        "key": "icloud_not_syncing",
+        "title": "iCloud Not Syncing",
+        "questions": [
+            "Are you signed into the correct Apple ID?",
+            "Is the device connected to the internet?"
+        ],
+        "solution_steps": [
+            "Go to System Settings > Apple ID > iCloud and verify your settings.",
+            "Toggle iCloud Drive off and back on.",
+            "Ensure sufficient iCloud storage space is available.",
+            "Sign out and back in to iCloud.",
+            "Check System Status at Apple's website to ensure no iCloud outage."
+        ]
+    },
+    "app_crashing": {
+        "category": "Software",
+        "key": "app_crashing",
+        "title": "Application Keeps Crashing",
+        "questions": [
+            "Is the app up-to-date?",
+            "Does the crash happen with a specific action or immediately on launch?"
+        ],
+        "solution_steps": [
+            "Update the app via App Store or official website.",
+            "Delete app preferences from ~/Library/Preferences.",
+            "Reinstall the application.",
+            "Check Console logs for crash details.",
+            "Create a new user account to test if issue is user-specific."
+        ]
+    },
+    "preferences_not_saving": {
+        "category": "System Preferences",
+        "key": "preferences_not_saving",
+        "title": "System Preferences Not Saving Changes",
+        "questions": [
+            "Do changes revert after restarting the system?",
+            "Is the issue specific to a certain settings area?"
+        ],
+        "solution_steps": [
+            "Ensure the user account has admin privileges.",
+            "Reset NVRAM and SMC (see detailed steps below).",
+            "Delete system preference files from ~/Library/Preferences and restart.",
+            "Repair disk permissions using Disk Utility (First Aid).",
+            "Update macOS to ensure system files are intact.",
+            "\nSMC Reset (for Intel Macs):\n1. Shut down your Mac.\n2. On MacBooks with T2 chip: Hold Control + Option (Alt) + Shift (right side) for 7 seconds, then add Power for another 7 seconds. Release all, wait a few seconds, then turn on.\n3. On other Intel MacBooks: Hold Shift + Control + Option (left side) + Power for 10 seconds. Release, then turn on.\n4. On desktops: Unplug power for 15 seconds, plug back in, wait 5 seconds, then turn on.\n\nNVRAM/PRAM Reset (Intel Macs):\n1. Shut down your Mac.\n2. Turn it on and immediately hold Option + Command + P + R for 20 seconds.\n3. Release keys after second startup sound or Apple logo appears/disappears twice.\n\nApple Silicon (M1/M2/M3):\n- SMC and NVRAM reset automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "mac_kernel_panic": {
+        "category": "Startup & Boot",
+        "key": "mac_kernel_panic",
+        "title": "Mac Kernel Panic (Random Restarts)",
+        "questions": [
+            "Does the Mac restart with a message about a problem?",
+            "Did you recently install new hardware or software?"
+        ],
+        "solution_steps": [
+            "Disconnect all external devices and restart.",
+            "Update all software via System Settings > General > Software Update.",
+            "Check for incompatible login items in System Settings > Users & Groups.",
+            "Run Apple Diagnostics (hold D during startup).",
+            "If issue persists, reinstall macOS or contact Apple Support."
+        ]
+    },
+    "mac_fan_noise": {
+        "category": "Performance",
+        "key": "mac_fan_noise",
+        "title": "Mac Fan Running Loud or Constantly",
+        "questions": [
+            "Is the Mac hot to the touch?",
+            "Are you running intensive apps or games?"
+        ],
+        "solution_steps": [
+            "Close unused applications and browser tabs.",
+            "Check Activity Monitor for high CPU usage.",
+            "Move the Mac to a cooler, well-ventilated area.",
+            "Reset SMC (see detailed steps below).",
+            "Update macOS and all apps.",
+            "\nSMC Reset (for Intel Macs):\n1. Shut down your Mac.\n2. On MacBooks with T2 chip: Hold Control + Option (Alt) + Shift (right side) for 7 seconds, then add Power for another 7 seconds. Release all, wait a few seconds, then turn on.\n3. On other Intel MacBooks: Hold Shift + Control + Option (left side) + Power for 10 seconds. Release, then turn on.\n4. On desktops: Unplug power for 15 seconds, plug back in, wait 5 seconds, then turn on.\n\nApple Silicon (M1/M2/M3):\n- SMC resets automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "mac_airdrop_not_working": {
+        "category": "Network & Internet",
+        "key": "mac_airdrop_not_working",
+        "title": "AirDrop Not Working",
+        "questions": [
+            "Are both devices unlocked and awake?",
+            "Are Wi-Fi and Bluetooth enabled on both devices?"
+        ],
+        "solution_steps": [
+            "Turn Wi-Fi and Bluetooth off and on again.",
+            "Set AirDrop to 'Everyone' temporarily in Finder > AirDrop.",
+            "Restart both devices.",
+            "Sign out and back in to iCloud.",
+            "Ensure both devices are within 9 meters (30 feet)."
+        ]
+    },
+    "mac_battery_not_charging": {
+        "category": "Power & Battery",
+        "key": "mac_battery_not_charging",
+        "title": "MacBook Battery Not Charging",
+        "questions": [
+            "Is the charger and cable Apple-certified?",
+            "Is the charging port clean and undamaged?"
+        ],
+        "solution_steps": [
+            "Try a different power outlet and charger.",
+            "Inspect the charging port for debris.",
+            "Reset SMC (see detailed steps below).",
+            "Check battery health in System Settings > Battery.",
+            "Update macOS to the latest version.",
+            "\nSMC Reset (for Intel Macs):\n1. Shut down your Mac.\n2. On MacBooks with T2 chip: Hold Control + Option (Alt) + Shift (right side) for 7 seconds, then add Power for another 7 seconds. Release all, wait a few seconds, then turn on.\n3. On other Intel MacBooks: Hold Shift + Control + Option (left side) + Power for 10 seconds. Release, then turn on.\n4. On desktops: Unplug power for 15 seconds, plug back in, wait 5 seconds, then turn on.\n\nApple Silicon (M1/M2/M3):\n- SMC resets automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "mac_display_flicker": {
+        "category": "Display",
+        "key": "mac_display_flicker",
+        "title": "Mac Display Flickering or Artifacts",
+        "questions": [
+            "Does the issue occur on an external display?",
+            "Did the problem start after a macOS update?"
+        ],
+        "solution_steps": [
+            "Restart the Mac.",
+            "Reset NVRAM and SMC (see detailed steps below).",
+            "Check for macOS and graphics driver updates.",
+            "Test with a different display or cable.",
+            "If persistent, contact Apple Support.",
+            "\nSMC Reset (for Intel Macs):\n1. Shut down your Mac.\n2. On MacBooks with T2 chip: Hold Control + Option (Alt) + Shift (right side) for 7 seconds, then add Power for another 7 seconds. Release all, wait a few seconds, then turn on.\n3. On other Intel MacBooks: Hold Shift + Control + Option (left side) + Power for 10 seconds. Release, then turn on.\n4. On desktops: Unplug power for 15 seconds, plug back in, wait 5 seconds, then turn on.\n\nNVRAM/PRAM Reset (Intel Macs):\n1. Shut down your Mac.\n2. Turn it on and immediately hold Option + Command + P + R for 20 seconds.\n3. Release keys after second startup sound or Apple logo appears/disappears twice.\n\nApple Silicon (M1/M2/M3):\n- SMC and NVRAM reset automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "mac_no_sound": {
+        "category": "Audio",
+        "key": "mac_no_sound",
+        "title": "No Sound from Mac Speakers",
+        "questions": [
+            "Is the volume muted or set low?",
+            "Are headphones or external speakers connected?"
+        ],
+        "solution_steps": [
+            "Check volume and mute settings.",
+            "Go to System Settings > Sound and select the correct output device.",
+            "Restart the Mac.",
+            "Reset NVRAM (see detailed steps below).",
+            "Try headphones to test output.",
+            "\nNVRAM/PRAM Reset (Intel Macs):\n1. Shut down your Mac.\n2. Turn it on and immediately hold Option + Command + P + R for 20 seconds.\n3. Release keys after second startup sound or Apple logo appears/disappears twice.\n\nApple Silicon (M1/M2/M3):\n- NVRAM resets automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "mac_apple_id_locked": {
+        "category": "Login & Account",
+        "key": "mac_apple_id_locked",
+        "title": "Apple ID Locked or Disabled",
+        "questions": [
+            "Did you receive a message about your Apple ID being locked?",
+            "Have you tried to reset your password?"
+        ],
+        "solution_steps": [
+            "Go to iforgot.apple.com to unlock your Apple ID.",
+            "Follow the on-screen instructions to reset your password.",
+            "Update your password on all Apple devices.",
+            "Contact Apple Support if you cannot unlock your account."
+        ]
+    },
+    "mac_camera_green_light": {
+        "category": "Camera & Video",
+        "key": "mac_camera_green_light",
+        "title": "Camera Green Light Stays On",
+        "questions": [
+            "Does the camera work in any app?",
+            "Have you recently closed a video call app?"
+        ],
+        "solution_steps": [
+            "Quit all apps that may use the camera.",
+            "Restart the Mac.",
+            "Check Activity Monitor for apps using the camera.",
+            "Reset SMC and NVRAM (see detailed steps below).",
+            "If the light stays on, contact Apple Support.",
+            "\nSMC Reset (for Intel Macs):\n1. Shut down your Mac.\n2. On MacBooks with T2 chip: Hold Control + Option (Alt) + Shift (right side) for 7 seconds, then add Power for another 7 seconds. Release all, wait a few seconds, then turn on.\n3. On other Intel MacBooks: Hold Shift + Control + Option (left side) + Power for 10 seconds. Release, then turn on.\n4. On desktops: Unplug power for 15 seconds, plug back in, wait 5 seconds, then turn on.\n\nNVRAM/PRAM Reset (Intel Macs):\n1. Shut down your Mac.\n2. Turn it on and immediately hold Option + Command + P + R for 20 seconds.\n3. Release keys after second startup sound or Apple logo appears/disappears twice.\n\nApple Silicon (M1/M2/M3):\n- SMC and NVRAM reset automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "mac_external_drive_readonly": {
+        "category": "Storage & File Access",
+        "key": "mac_external_drive_readonly",
+        "title": "External Drive is Read-Only",
+        "questions": [
+            "Is the drive formatted as NTFS?",
+            "Can you write to the drive on another Mac?"
+        ],
+        "solution_steps": [
+            "Check the drive format in Disk Utility.",
+            "Reformat the drive to exFAT or APFS if needed (back up data first).",
+            "Check permissions in Get Info (right-click the drive).",
+            "Try another USB port or cable.",
+            "Test the drive on another computer."
+        ]
+    },
+    "mac_filevault_password_prompt": {
+        "category": "Security & Privacy",
+        "key": "mac_filevault_password_prompt",
+        "title": "FileVault Keeps Asking for Password",
+        "questions": [
+            "Did you recently change your login password?",
+            "Is FileVault encryption in progress?"
+        ],
+        "solution_steps": [
+            "Restart the Mac.",
+            "Go to System Settings > Privacy & Security > FileVault and check status.",
+            "Enter the correct password or recovery key.",
+            "If you forgot the password, use your Apple ID or recovery key to reset.",
+            "Contact Apple Support if you cannot unlock the disk."
+        ]
+    },
+    "mac_time_machine_slow": {
+        "category": "Backup & Restore",
+        "key": "mac_time_machine_slow",
+        "title": "Time Machine Backup is Slow",
+        "questions": [
+            "Is this the first backup to this drive?",
+            "Are you backing up over Wi-Fi or USB?"
+        ],
+        "solution_steps": [
+            "Connect the backup drive directly via USB if possible.",
+            "Exclude large files or folders from backup in Time Machine options.",
+            "Ensure the Mac is not in sleep mode during backup.",
+            "Check the drive for errors using Disk Utility.",
+            "Let the initial backup complete; future backups will be faster."
+        ]
+    },
+    "mac_printer_offline": {
+        "category": "Printing & Peripheral",
+        "key": "mac_printer_offline",
+        "title": "Printer Shows Offline on Mac",
+        "questions": [
+            "Is the printer powered on and connected?",
+            "Is the printer set as default?"
+        ],
+        "solution_steps": [
+            "Restart the printer and the Mac.",
+            "Check the printer's connection (USB/Wi-Fi).",
+            "Remove and re-add the printer in System Settings > Printers & Scanners.",
+            "Update printer drivers.",
+            "Try printing from another app."
+        ]
+    },
+    "mac_usb_not_recognized": {
+        "category": "Peripheral & Dock",
+        "key": "mac_usb_not_recognized",
+        "title": "USB Device Not Recognized",
+        "questions": [
+            "Is the device working on another computer?",
+            "Are you using a USB hub or adapter?"
+        ],
+        "solution_steps": [
+            "Try a different USB port.",
+            "Connect the device directly to the Mac.",
+            "Restart the Mac.",
+            "Reset SMC (see detailed steps below).",
+            "Check for macOS updates.",
+            "\nSMC Reset (for Intel Macs):\n1. Shut down your Mac.\n2. On MacBooks with T2 chip: Hold Control + Option (Alt) + Shift (right side) for 7 seconds, then add Power for another 7 seconds. Release all, wait a few seconds, then turn on.\n3. On other Intel MacBooks: Hold Shift + Control + Option (left side) + Power for 10 seconds. Release, then turn on.\n4. On desktops: Unplug power for 15 seconds, plug back in, wait 5 seconds, then turn on.\n\nApple Silicon (M1/M2/M3):\n- SMC resets automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "info_smc_reset": {
+        "category": "Resetting SMC (System Management Controller)",
+        "key": "info_smc_reset",
+        "questions": [
+            "Is your Mac experiencing power, battery, fan, or charging issues?",
+            "Is your Mac not charging, not sleeping, or having unexpected shutdowns?"
+        ],
+        "title": "How to Reset SMC (System Management Controller)",
+        "description": "An SMC reset addresses power, battery, fan, and charging issues. Use it when there are problems like Mac not charging or sleeping.",
+        "steps": [
+            "For Intel MacBooks with T2 chip (2018 and later):\n1. Shut down your Mac.\n2. Hold Control + Option (Alt) + Shift (right side) for 7 seconds, then add Power for another 7 seconds.\n3. Release all keys, wait a few seconds, then turn on your Mac.",
+            "For other Intel MacBooks (without T2 chip):\n1. Shut down your Mac.\n2. Hold Shift + Control + Option (left side) + Power for 10 seconds.\n3. Release all keys, then turn on your Mac.",
+            "For Intel Mac desktops (iMac, Mac mini, Mac Pro):\n1. Shut down and unplug the power cord.\n2. Wait 15 seconds, plug back in, wait 5 seconds, then turn on.",
+            "For Apple Silicon (M1/M2/M3):\n- SMC resets automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    },
+    "info_nvram_reset": {
+        "category": "Resetting NVRAM/PRAM",
+        "key": "info_nvram_reset",
+        "questions": [
+            "Are you having display, audio, or startup disk issues?",
+            "Is your Mac showing boot problems, wrong time zone, or display settings not saving?"
+        ],
+        "title": "How to Reset NVRAM/PRAM",
+        "description": "An NVRAM reset is for display, audio, and startup disk issues. It's helpful when there are boot problems, wrong time zone, or display issues.",
+        "steps": [
+            "For Intel Macs:\n1. Shut down your Mac.\n2. Turn it on and immediately hold Option + Command + P + R.\n3. Keep holding for about 20 seconds.\n4. Release after the second startup sound or when the Apple logo appears/disappears twice.",
+            "For Apple Silicon (M1/M2/M3):\n- NVRAM resets automatically on shutdown/restart. Simply restart your Mac."
+        ]
+    }
+}
