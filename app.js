@@ -270,7 +270,7 @@ function openChatBot() {
   const botWindow = document.createElement('div');
   botWindow.id = 'floating-bot-window';
   botWindow.innerHTML = `
-    <div class='bot-header'>TechEase MiniBot <span class='bot-close' onclick='closeChatBot()'>&times;</span></div>
+    <div class='bot-header'>IT self-support MiniBot <span class='bot-close' onclick='closeChatBot()'>&times;</span></div>
     <div class='bot-messages' id='bot-messages'></div>
     <form class='bot-input-area' onsubmit='return sendBotMessage(event)'>
       <input id='bot-user-input' type='text' placeholder='Search the categories...' autocomplete='off' />
@@ -283,7 +283,7 @@ function openChatBot() {
   if(document.body.classList.contains('dark')) botWindow.style.background = '#232a36';
   document.body.appendChild(botWindow);
   setTimeout(()=>{
-    addBotMessage("Hi! I'm TechEase MiniBot. Search the categories or select one below:");
+    addBotMessage("Hi! I'm ITself MiniBot. Search the categories or select one below:");
     addBotQuickReplies();
   }, 200);
 }
